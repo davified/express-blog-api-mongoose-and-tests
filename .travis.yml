@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- '9'
+cache:
+  directories:
+  - node_modules
+services:
+- mongodb
+script:
+- yarn test
+deploy:
+  provider: heroku
+  app: cryptic-inlet-42191
+  on:
+    repo: thoughtworks-jumpstart/express-blog-api-mongoose-and-tests
+  api_key:
+    secure: GyUFY4ysflsaMJS7A62UealSupIbiZtQOYBPewWeEvIstwfJI6KeWTET9B8TfeTY6QyKgAlai0+dL19jbG+HNB6n2mkwdSuEuXw/HJW96kmcQAmUSDveWTTkqDnrE+/K/WZV3ABGT73sx7vOTv6/Ob2eP/2zjC1Yp9IXZf8BVqSUJYkcWXV3KuksBPe1RjU/aMqOg/RtiUU90Df0gI5ppjsN9VqTMD6fkFMUOofpkp85fFZppDkv45PDeIUjEK0QfDBu8MKYBky8OMhNH2xHQf6hD7CnkaZcNFhj+z6zy0/Sc0b/fUyTPTreCZ6gzRY1yHOIDM+Ox8OxpqR+H3O+pbbIsaFPv2oWHqW0d5W9hKQBaA6EZOyqr8ThB5tu90tEJL8t0La1H9bgHC98ZmnEDNZZgiJVZlhG6SWB+6dnryMn8qM/SypQVXDmg8FI4SOdEt7ptLJ++n0znFWkYfoWW8TtX6VudFQpduPReLDpmMKpKUOL70vqKGpdjfl+mJjsg7daZs9nMdkeM9mqanourfNH7B4SW5OLVW9dduTiLmnIVxFuIlh1bB1AvCUZtifP2VcJRnuf/ehJxYknngpaWxFVJ6s/GR0eGZEvO/w6Ku9RG/9Qs3NVt3a5/ECvdAK9AZAV7SeMG1NbRSSQef7JZxpDgikoUztofY6HFTRdXlM=
